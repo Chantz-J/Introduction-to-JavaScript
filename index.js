@@ -124,9 +124,24 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(weight, age){
+  if( age >= 1 && weight <= 5){
+    return weight * .05
+  } else if (age >= 1 && weight >= 6 && weight <= 10) {
+    return weight * .04
+  } else if ( age >= 1 && weight >= 11 && weight <= 15) {
+    return weight * .03
+  } else if ( age >= 1 && weight >= 15) {
+    return weight * .04 
+  } else if (age < .583 && age >= .333) {
+    return weight * .05
+  } else if (age < .333){
+    return weight * .10
   }
+}
+console.log(hungryDog(15, 1))
+
+
 
 
 
@@ -151,10 +166,44 @@ Use the game function below to do the following:
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
+
 function game(user, computer){
-    /*add your code here*/
+  const choices = ["rock", "paper", "scissors"];
+
+  let computerRandom = Math.floor(Math.random() * choices.length);
+  computer = choices[computerRandom];
+
+    if(user === "rock"){
+      if(computer ==="scissors"){
+        return "you win!"
+      }
+
+  }
+    if(user ==="paper"){
+      if(computer === "rock"){
+        return "you win!"
+      }
+      else{
+          return "you lose!"
+      }
+  }
+
+  if( user === "scissors"){
+        if(computer === "rock"){
+          return "you win!"
+      }
+      else{
+          return "you lose!"
+      }
+  }
 }
-  
+console.log(game('rock', 'scissors')) 
+
+
+
+
+
+
   
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -168,9 +217,12 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(km){
+    let divideNum =  1.609344
+    return km / divideNum
   }
+  console.log(miles(5))
+  
 
 
 
@@ -182,9 +234,13 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(cm){
+   let divider = 30.48 
+   return cm / divider 
   }
+  console.log(feet(20))
+  
+
  
 
 
@@ -218,10 +274,21 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(/*Your Code here */){
-  /*Your Code here */
+function grade(letter){
+  if (letter < 60){
+        return 'you got an F' 
+   } else if (letter < 70) {
+        return 'you got a D' 
+  } else if (letter < 80)  {
+            return 'you got a C' 
+  } else if (letter < 90) {
+        return 'you got a B' 
+  } else if (letter < 100) {
+        return 'you got an A' 
+    }
   }
   
+  console.log(grade(52))
   
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
