@@ -17,12 +17,17 @@ Do the following:
 
    HINT: no function required
 */
-const votingAge = 18
-if (votingAge >= 18){
-  console.log(true) 
-} else {
-  console.log(false)
+
+const legalVoter = (votingAge) => {
+  if (votingAge !== 18) {
+    return false
+  } else {
+    return true
+  }
 }
+
+console.log(legalVoter(16))
+
 
 
 
@@ -38,7 +43,12 @@ Do the following:
    HINT: no function required
 */
 
-
+// let chantzAge = "21"
+// let chantzBirthday = "Feburary 12th"
+// if (chantzBirthday === "Feburary 12th"){
+//   chantzAge = 22
+//   console.log(chantzAge)
+// }
 
 
 
@@ -81,8 +91,8 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(age){
+   return age * 7
 }
 
 
