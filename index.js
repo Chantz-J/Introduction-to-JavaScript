@@ -166,38 +166,43 @@ Use the game function below to do the following:
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
+//Judging win/ lose conditions
+const choice = Math.floor(Math.random() * 3)
 
 function game(user, computer){
-  const choices = ["rock", "paper", "scissors"];
+  let aiChoice = null;
 
-  let computerRandom = Math.floor(Math.random() * choices.length);
-  computer = choices[computerRandom];
-
-    if(user === "rock"){
-      if(computer ==="scissors"){
-        return "you win!"
-      }
-
+  if (computer === 0){
+    aiChoice = 'rock'
+  } else if ( computer === 1 ){
+    aiChoice = 'paper'
+  } else {
+    aiChoice = 'scissors'
   }
-    if(user ==="paper"){
-      if(computer === "rock"){
-        return "you win!"
-      }
-      else{
-          return "you lose!"
-      }
+  /*********/
+  if(user === computer ){
+    return "it's a tie"
   }
-
-  if( user === "scissors"){
-        if(computer === "rock"){
-          return "you win!"
-      }
-      else{
-          return "you lose!"
-      }
+  if (user === 'rock' && computer === 'scissors'){
+    return 'you win!'
+  } else if (user === 'rock' && computer === 'paper' ){
+    return 'you lose!'
+  }
+  /*********/
+  if (user === 'scissors' && computer === 'paper'){
+    return 'you win!'
+  }else if (user === 'scissors' && computer === 'rock'){
+    return 'you lose!'
+  }
+  /*********/
+  if (user === 'paper' && computer === 'rock'){
+    return 'you win!'
+  } else if (user === 'paper' && computer === 'scissors'){
+    return 'you lose!'
   }
 }
-console.log(game('rock', 'scissors')) 
+
+game('Paper', choice)
 
 
 
@@ -206,7 +211,7 @@ console.log(game('rock', 'scissors'))
 
   
 
-/*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
+/*🚀🚀🚀🚀🚀🚀🚀🚀let co🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 //Metric Converter 
 //Task 5a - KM to Miles 
@@ -218,7 +223,7 @@ Using the miles function below do the following:
 */
 
 function miles(km){
-    let divideNum =  1.609344
+    let divideNum =  1.6
     return km / divideNum
   }
   console.log(miles(5))
