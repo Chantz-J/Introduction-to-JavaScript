@@ -223,8 +223,10 @@ Using the miles function below do the following:
 */
 
 function miles(km){
-    let divideNum =  1.6
-    return km / divideNum
+    // let divideNum =  0.621
+    let num = km * 0.621371
+    // let n = num.toFixed(5)
+    return num
   }
   console.log(miles(5))
   
